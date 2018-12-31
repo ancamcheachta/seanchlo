@@ -1,3 +1,4 @@
+'use strict';
 /**
  * TODO: Bain tastálacha as `seanchlo.convert()` ar na luachanna seo a leanas:
     Bh: \u1E02
@@ -32,3 +33,27 @@
     agus: \u204A
     &: \u204A
 */
+
+const chai = require('chai');
+const seanchlo = require ('./index');
+const assert = chai.assert;
+
+const BUNSAMPLA_ROIMHE = 'Is túisce deoch ná scéal';
+const BUNSAMPLA_I_NDIAIDH = 'Is túisce deoċ ná scéal';
+const SAMPLA_AGUS_ROIMHE = 'Saol fada, gob fliuch, agus bás in Éirinn';
+const SAMPLA_AGUS_I_NDIAIDH = 'Saol fada, gob fliuċ, ⁊ bás in Éirinn';
+const TIRONIAN_NOTES = {tironianNotes: true};
+
+describe('Tástálacha `convert()`', () => {
+    it('tuigeann sé séimhiuithe ón mbunshampla', () => {
+        let converted = seanchlo.convert(BUNSAMPLA_ROIMHE);
+        
+        assert(converted == BUNSAMPLA_I_NDIAIDH, 'Níl an luach bailí.');
+    });
+    
+    it('tuigeann sé sampla le "agus"', () => {
+        let converted = seanchlo.convert(SAMPLA_AGUS_ROIMHE, TIRONIAN_NOTES);
+        
+        assert(converted == SAMPLA_AGUS_I_NDIAIDH, 'Níl an luach bailí.');
+    });
+});

@@ -1,19 +1,34 @@
 {
   "name": "seanchlo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Coinbhéartaigh teaghrán Gaeilge go dtí an seanchló",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0;"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc mocha --exit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ancamcheachta/seanchlo.git"
   },
+  "keywords": [
+    "seanchló",
+    "Gaeilge",
+    "Irish",
+    "cló",
+    "gaelach"
+  ],
   "author": "An Camchéachta <ancamcheachta@protonmail.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/ancamcheachta/seanchlo/issues"
   },
-  "homepage": "https://github.com/ancamcheachta/seanchlo#readme"
+  "homepage": "https://github.com/ancamcheachta/seanchlo#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "coveralls": "3.0.0",
+    "mocha": "5.0.1",
+    "mocha-lcov-reporter": "1.3.0",
+    "nyc": "11.4.1"
+  }
 }
