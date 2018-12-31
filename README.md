@@ -1,4 +1,7 @@
 # Seanċló
+[![Build Status](https://travis-ci.org/ancamcheachta/seanchlo.svg?branch=master)](https://travis-ci.org/ancamcheachta/seanchlo)
+[![Coverage Status](https://coveralls.io/repos/github/ancamcheachta/seanchlo/badge.svg?branch=master)](https://coveralls.io/github/ancamcheachta/seanchlo?branch=master)
+[![npm version](https://badge.fury.io/js/seanchlo.svg)](https://badge.fury.io/js/seanchlo)
 
 ## Úsáid
 ### Bunsampla
